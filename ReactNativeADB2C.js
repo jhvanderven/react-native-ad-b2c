@@ -49,7 +49,7 @@ class B2CAuthentication {
     if (Date.now() < credentials.expires_on)
       return new Promise.resolve(credentials.access_token);
     else {
-      return refreshToken(credentials.refresh_token);
+      return this.refreshToken(credentials.refresh_token);
     }
   };
 
